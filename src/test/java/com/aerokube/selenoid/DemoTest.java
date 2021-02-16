@@ -37,7 +37,7 @@ public class DemoTest {
             WebElement input = driver.findElement(By.xpath("//*[@id=\"text\"]"));
 
             input.sendKeys(Keys.chord("АО Neoflex", Keys.ENTER));
-            Thread.sleep(1000000);
+            Thread.sleep(10000);
         } finally {
             takeScreenshot(driver);
         }
