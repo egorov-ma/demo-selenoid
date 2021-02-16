@@ -32,7 +32,10 @@ public class DemoTest {
         try {
             Thread.sleep(3000);
             driver.get("https://duckduckgo.com/");
-            WebElement input = driver.findElement(By.cssSelector("input#search_form_input_homepage"));
+            //WebElement input = driver.findElement(By.cssSelector("input#search_form_input_homepage"));
+            //*[@id="search_form_input_homepage"]
+            WebElement input = driver.findElement(By.cssSelector("//*[@id=\"search_form_input_homepage\"]"));
+
             input.sendKeys(Keys.chord("selenium", Keys.ENTER));
             Thread.sleep(10000);
         } finally {
