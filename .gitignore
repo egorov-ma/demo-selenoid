@@ -1,0 +1,9 @@
+target/
+.idea/
+logs/
+*.iml
+*.png
+build/
+allure-results/
+data/testsuits/testData.xlsx
+data/testsuits/testData1.xlsx
