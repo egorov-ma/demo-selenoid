@@ -31,10 +31,10 @@ public class DemoTest {
     public void browserTest() throws Exception {
         try {
             Thread.sleep(3000);
-            driver.get("https://duckduckgo.com/");
+            driver.get("https://yandex.com/");
             //WebElement input = driver.findElement(By.cssSelector("input#search_form_input_homepage"));
             //*[@id="search_form_input_homepage"]
-            WebElement input = driver.findElement(By.id("search_form_input_homepage"));
+            WebElement input = driver.findElement(By.cssSelector("body > div.eq.rows > div.YG.rows__row.rows__row_main > div > ftgr > fgn > fwap > pjtr > dhtaq > pjtr > aqwf > div > div > div > div.services-new__list > a:nth-child(6) > div.services-new__icon"));
 
             input.sendKeys(Keys.chord("selenium", Keys.ENTER));
             Thread.sleep(10000);
