@@ -30,14 +30,14 @@ public class DemoTest {
     @Test
     public void browserTest() throws Exception {
         try {
-            Thread.sleep(30000);
+            Thread.sleep(30);
             driver.get("https://yandex.com/");
-            Thread.sleep(100000);
+            Thread.sleep(10);
             //WebElement input = driver.findElement(By.cssSelector("input#search_form_input_homepage"));
-            WebElement input = driver.findElement(By.id("search_form_input_homepage"));
+            WebElement input = driver.findElement(By.xpath("//*[@id=\"text\"]"));
 
             input.sendKeys(Keys.chord("selenium", Keys.ENTER));
-            Thread.sleep(10000);
+            Thread.sleep(10);
         } finally {
             takeScreenshot(driver);
         }
@@ -48,7 +48,6 @@ public class DemoTest {
         byte[] screen = ((TakesScreenshot) new Augmenter().augment(driver)).getScreenshotAs(OutputType.BYTES);
         UUID uuid = UUID.randomUUID();
         FileUtils.writeByteArrayToFile(new File(uuid.toString() + ".png"), screen);
-        //FileUtils.writeByteArrayToFile(new File(driver.getSessionId() + ".png"), screen);
     }
 
     @After
