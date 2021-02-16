@@ -35,7 +35,6 @@ public class DemoTest {
             Thread.sleep(10);
             //WebElement input = driver.findElement(By.cssSelector("input#search_form_input_homepage"));
             WebElement input = driver.findElement(By.xpath("//*[@id=\"text\"]"));
-
             input.sendKeys(Keys.chord("АО Neoflex", Keys.ENTER));
             Thread.sleep(10000);
         } finally {
