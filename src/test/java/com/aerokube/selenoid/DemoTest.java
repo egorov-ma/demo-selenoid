@@ -20,7 +20,6 @@ public class DemoTest {
     @Before
     public void openDriver() throws Exception {
         final DesiredCapabilities browser = DesiredCapabilities.chrome();
-//        browser.setCapability("enableVideo", true);
         browser.setCapability("enableLog", true);
         browser.setCapability("sessionTimeout", "1h");
         browser.setCapability("enableVNC", true);
