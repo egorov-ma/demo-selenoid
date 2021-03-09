@@ -21,7 +21,8 @@ public class DemoTest {
     public void openDriver() throws Exception {
         final DesiredCapabilities browser = DesiredCapabilities.chrome();
 //        browser.setCapability("enableVideo", true);
-//        browser.setCapability("enableLog", true);
+        browser.setCapability("enableLog", true);
+        browser.setCapability("sessionTimeout", "1h");
         browser.setCapability("enableVNC", true);
         browser.setCapability("screenResolution", "1920x1080x24");
         driver = new RemoteWebDriver(new URL("http://192.168.56.101:4444/wd/hub"), browser);
@@ -33,7 +34,6 @@ public class DemoTest {
             Thread.sleep(30);
             driver.get("https://yandex.com/");
             Thread.sleep(10);
-            //WebElement input = driver.findElement(By.cssSelector("input#search_form_input_homepage"));
             WebElement input = driver.findElement(By.xpath("//*[@id=\"text\"]"));
             input.sendKeys(Keys.chord("Neoflex", Keys.ENTER));
             System.out.println("-------------- 10000 --------------");
