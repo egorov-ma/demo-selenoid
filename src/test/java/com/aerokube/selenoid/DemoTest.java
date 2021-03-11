@@ -42,51 +42,6 @@ public class DemoTest {
         }
     }
 
-    @Test
-    public void browserTest0() throws Exception {
-        try {
-            Thread.sleep(30);
-            driver.get("https://yandex.com/");
-            Thread.sleep(10);
-            WebElement input = driver.findElement(By.xpath("//*[@id=\"text\"]"));
-            input.sendKeys(Keys.chord("Neoflex", Keys.ENTER));
-            System.out.println("-------------- 10000 --------------");
-            Thread.sleep(10000);
-        } finally {
-            takeScreenshot(driver);
-        }
-    }
-
-    @Test
-    public void browserTest1() throws Exception {
-        try {
-            Thread.sleep(30);
-            driver.get("https://yandex.com/");
-            Thread.sleep(10);
-            WebElement input = driver.findElement(By.xpath("//*[@id=\"text\"]"));
-            input.sendKeys(Keys.chord("Neoflex", Keys.ENTER));
-            System.out.println("-------------- 10000 --------------");
-            Thread.sleep(10000);
-        } finally {
-            takeScreenshot(driver);
-        }
-    }
-
-    @Test
-    public void browserTest2() throws Exception {
-        try {
-            Thread.sleep(30);
-            driver.get("https://yandex.com/");
-            Thread.sleep(10);
-            WebElement input = driver.findElement(By.xpath("//*[@id=\"text\"]"));
-            input.sendKeys(Keys.chord("Neoflex", Keys.ENTER));
-            System.out.println("-------------- 10000 --------------");
-            Thread.sleep(10000);
-        } finally {
-            takeScreenshot(driver);
-        }
-    }
-
     static void takeScreenshot(RemoteWebDriver driver) throws Exception {
         byte[] screen = ((TakesScreenshot) new Augmenter().augment(driver)).getScreenshotAs(OutputType.BYTES);
         UUID uuid = UUID.randomUUID();
